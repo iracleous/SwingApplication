@@ -23,8 +23,13 @@ public class Canvas  extends JPanel implements Runnable {
        super.paintComponent(g); // clears the background
         g.setColor(Color.BLUE);
         g.fillOval(100 + x, 100, 50, 50);
+        g.setColor(Color.RED);
         g.fillOval(200 + x, 200, 50, 50);
+        g.setColor(Color.GREEN);
         g.drawRect(300 + x, 300, 100, 100);
+        g.setColor(Color.BLACK);
+        String message = "x= "+ x;
+        g.drawString( message, 500,500);
     }
 
     public void run() {
@@ -40,7 +45,7 @@ public class Canvas  extends JPanel implements Runnable {
             }
             catch (InterruptedException ex) {
             }
-            System.out.println("x= "+ x);
+
         }
     }
 }
