@@ -35,7 +35,7 @@ public class Canvas  extends JPanel implements Runnable {
     public void run() {
         while (true) {
             x += direction;
-            if(x>600 || x<0) {
+            if(x>400 || x<0) {
                 direction *= -1;
             }
 
